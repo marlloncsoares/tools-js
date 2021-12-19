@@ -4,7 +4,8 @@
   "description": "Ferramentas para JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:cover": "npm test -- --coverage"
   },
   "repository": {
     "type": "git",
