@@ -1,4 +1,4 @@
-const checks = require('./cheks');
+const checks = require('./checks');
 
 const value = 5;
 console.log('isNull: ', checks.isNull(value));
