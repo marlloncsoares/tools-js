@@ -1,4 +1,4 @@
-const checks = require('./checks');
+const checks = require('./checks').default;
 
 describe('Checks', () => {
     test('should return true if a null value is provided.', () => {

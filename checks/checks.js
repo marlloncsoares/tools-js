@@ -30,7 +30,11 @@ const isInt = (value = null) => Number.isInteger(value);
  */
 const isEmpty = (value = null) => Object.keys(value).length === 0;
 
-
+/**
+ * Verifies if value is email.
+ * @param {*} value - Value to be verified.
+ * @returns Returns true, if informed value is email, false returns otherwise.
+ */
 const isEmail = (value = null) => /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value);
 
 module.exports = {
