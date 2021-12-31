@@ -21,4 +21,19 @@ describe('Checks', () => {
         const value = 5;
         expect(checks.isInt(value)).toBe(true);
     });
+
+    test('should return true if a empty value is provided.', () => {
+        const value = {};
+        expect(checks.isEmpty(value)).toBe(true);
+    });
+
+    test('should return true if a email valid is provided.', () => {
+        const value = 'any_email@test.com';
+        expect(checks.isEmail(value)).toBe(true);
+    });
+
+    test('should return false if a email invalid is provided.', () => {
+        const value = 'any_emailtest';
+        expect(checks.isEmail(value)).toBe(false);
+    });
 })

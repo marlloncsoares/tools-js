@@ -23,8 +23,20 @@ const isNullish = (value = null) => (value === null) || (value === undefined);
  */
 const isInt = (value = null) => Number.isInteger(value);
 
+/**
+ * Verifies if value is empty.
+ * @param {*} value - Value to be verified.
+ * @returns Returns true, if informed value is empty, false returns otherwise.
+ */
+const isEmpty = (value = null) => Object.keys(value).length === 0;
+
+
+const isEmail = (value = null) => /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value);
+
 module.exports = {
     isNull,
     isNullish,
-    isInt
+    isInt,
+    isEmpty,
+    isEmail
 };
