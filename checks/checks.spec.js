@@ -46,4 +46,11 @@ describe('Checks', () => {
         const value = 'any_emailtest';
         expect(checks.isEmail(value)).toBe(false);
     });
+
+    test('should return true if values euqal is provided.', () => {
+        expect(checks.isEqual(5, 5)).toBe(true);
+        expect(checks.isEqual(false, false)).toBe(true);
+        expect(checks.isEqual('jose', 'jose')).toBe(true);
+        expect(checks.isEqual(null, null)).toBe(true);
+    });
 })
