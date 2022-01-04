@@ -24,6 +24,13 @@ const isNullish = (value = null) => (value === null) || (value === undefined);
 const isInt = (value = null) => Number.isInteger(value);
 
 /**
+ * Verifies if value is is float.
+ * @param {*} value - Value to be verified.
+ * @returns Returns true, if informed value is Float, false returns otherwise.
+ */
+const isFloat = (value = null) => !isNullish(value) && !isInt(value);
+
+/**
  * Verifies if value is empty.
  * @param {*} value - Value to be verified.
  * @returns Returns true, if informed value is empty, false returns otherwise.
@@ -41,6 +48,7 @@ module.exports = {
     isNull,
     isNullish,
     isInt,
+    isFloat,
     isEmpty,
     isEmail
 };
